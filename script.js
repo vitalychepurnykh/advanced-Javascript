@@ -18,7 +18,11 @@ const renderCatalog = (list) => {
     console.log(productList);
 
     document.querySelector('.products').innerHTML = productList.join(" "); //использовал метод join, и использовал символ
+<<<<<<< HEAD
                                                                            //"пробел" между элементами
+=======
+    //"пробел" между элементами
+>>>>>>> homework1
 };
 
 renderCatalog(products);
