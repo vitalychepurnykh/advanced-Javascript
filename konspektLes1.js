@@ -200,14 +200,25 @@
 
 
 
-// больше 1го параметра
-const calcAge = (x, y = 10) => {  //либо в параметре(x, y), а console.log(1, 10) 
-    return 6 - x + y;
+// // больше 1го параметра
+// const calcAge = (x, y = 10) => {  //либо в параметре(x, y), а console.log(1, 10) 
+//     return 6 - x + y;
     
+// }
+
+// console.log(calcAge(1));   //если параметр передан в условии (y = 10), то в консоли можно его не писать
+
+//es5
+var box = {
+    color: 'green',
+    position: 1,
+    clickMe: function () {
+        document.getElementsByClassName('green')[0]
+        .addEventListener('click', function () {
+            console.log(this);
+            console.log('This is box number ' + this.position + ' and color ' + this.color);
+        });
+    }
 }
 
-console.log(calcAge(1));   //если параметр передан в условии (y = 10), то в консоли можно его не писать
-
-
-//закончил на 1.43  
-..
+box.clickMe();
