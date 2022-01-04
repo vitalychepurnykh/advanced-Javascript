@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 2</title>
+</head>
+
+<body>
+    <!--insertAdjacentHTML-->
+    <!--beforebegin-->
+    <p>
+        <!--afterbegin-->
+        <span></span>
+        <!--beforeend-->
+    </p>
+    <!--afterend-->
+    <script>
+        'use strict';
+        // ES5
+        // var user = {
+        //     name: 'Vasya',
+        //     age: 25,
+        // }
+
+        // function Person(name, yearOfBirth) {
+        //     this.name = name;
+        //     this.yearOfBirth = yearOfBirth;
+        // }
+        //
+        // Person.prototype.calAge = function () {
+        //     return new Date().getFullYear() - this.yearOfBirth;
+        // };
+        //
+        // function Teacher(name, yearOfBirth, subject) {
+        //     Person.call(this, name, yearOfBirth);
+        //     this.subject = subject;
+        // }
+        //
+        // Teacher.prototype = Object.create(Person.prototype);
+        // Teacher.prototype.constructor = Teacher;
+        //
+        // const vasya = new Person('Vasya', 1990);
+        // const ann = new Teacher('Ann', 2000, 'Math');
+
+        // ES6
+        // class Person {
+        //     constructor(name, yearOfBirth) {
+        //         this.name = name;
+        //         this.yearOfBirth = yearOfBirth;
+        //     }
+
+        //     calcAge() {
+        //         return new Date().getFullYear() - this.yearOfBirth;
+        //     }
+        // }
+
+        // class Teacher extends Person {
+        //     constructor(name, yearOfBirth, subject) {
+        //         super(name, yearOfBirth);
+        //         this.subject = subject;
+        //     }
+
+        //     static triple(x = 1) {
+        //         return x * 3;
+        //     }
+        // }
+
+        // const vasya = new Person('Vasya', 1990);
+        // const ann = new Teacher('Ann', 2000, 'Math');
+        class TrainyDeveloper {
+            constructor (name, lastname, post, experience) {
+                this.name = name;
+                this.lastname = lastname;
+                this.post = post;
+                this.experience = experience;
+            }
+
+            Sayhi() {
+                alert(this.name + " hello");
+            };
+
+            PostCalc() {
+                if (this.experience > 2)
+                alert(this.post = "middle");
+                console.log(vitalyChe3Year);
+            }
+        }
+
+        class MiddleDeveloper extends TrainyDeveloper {
+            constructor(name, lastname, post, experience, frontskills) {
+                super(name, lastname, post, experience);
+                this.frontskills = frontskills;
+                }   
+            }
+            
+            const vitalyChe = new TrainyDeveloper('Vitaly', 'Chepurnykh', 'trainy', 1);
+            const vitalyChe3Year = new MiddleDeveloper ('Vitaly', 'Chepurnykh', 'junior', 3, 'web-developer')
+            vitalyChe.Sayhi();
+            vitalyChe3Year.PostCalc();
+    </script>
+</body>
+
+</html>
