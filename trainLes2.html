@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let goods = [
+        //         { id: 1, title: 'Notebook', price: 1000 },
+        //         { id: 2, title: 'Mouse', price: 100 },
+        //         { id: 3, title: 'Keyboard', price: 250 },
+        //         { id: 4, title: 'Gamepad', price: 150 },
+        //     ];
+        //     function arraySum(goods) {
+        //             var sum = 0;
+        //             for (var i = 0; goods.length; i++) {
+        //                 sum += goods[2][i];
+        //             }
+        //             console.log(sum);
+        //         }
+        //         arraySum(goods);
+        class goodsCollection extends Array {
+                sum(key) {
+                    return this.reduce((a, b) => a + (b[key] || 0), 0);
+                }
+            }   
+            const goods = new goodsCollection(...[
+                 { id: 1, title: 'Notebook', price: 1000 },
+                 { id: 2, title: 'Mouse', price: 100 },
+                 { id: 3, title: 'Keyboard', price: 250 },
+                 { id: 4, title: 'Gamepad', price: 150 },
+             ]);
+
+            alert(goods.sum('price')); 
+    </script>
+</body>
+</html>
